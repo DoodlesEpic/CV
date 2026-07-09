@@ -1,0 +1,21 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.dvi
+*.xdv
+
+# Generated PDF (built by CI, download it from the Actions artifacts)
+curriculo_eduardo_moraes.pdf
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
