@@ -1,0 +1,10 @@
+# Normalize line endings across platforms
+* text=auto
+
+# LaTeX sources are text, always use LF
+*.tex text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+
+# PDFs are binary, never diff or merge them as text
+*.pdf binary
