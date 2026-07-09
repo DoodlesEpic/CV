@@ -1,0 +1,111 @@
+% Curriculum vitae - Eduardo Lima Moraes
+% Compile with: pdflatex cv.tex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{charter}
+
+\definecolor{rulegray}{HTML}{999999}
+\definecolor{subgray}{HTML}{444444}
+
+% Sections: small caps, thin rule
+\titleformat{\section}{\normalsize\scshape\bfseries}{}{0pt}{}[\vspace{-7pt}\textcolor{rulegray}{\rule{\textwidth}{0.4pt}}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% Compact lists
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,parsep=0pt,topsep=2pt,label=\textbullet}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% Experience/education entry
+\newcommand{\entry}[4]{%
+  \textbf{#1} \hfill {\small #3}\\
+  {\itshape\color{subgray} #2} \hfill {\small\color{subgray}#4}\par
+}
+
+\begin{document}
+\enlargethispage{2\baselineskip}
+
+% ------------------------- HEADER -------------------------
+\begin{center}
+  {\huge\bfseries Eduardo Lima Moraes}\\[6pt]
+  {\small
+    Barueri, São Paulo, Brasil \;\textbar\;
+    \href{mailto:moraes.eduardo@proton.me}{moraes.eduardo@proton.me} \;\textbar\;
+    \href{https://www.doodlesdev.com}{doodlesdev.com} \;\textbar\;
+    \href{https://github.com/DoodlesEpic}{github.com/DoodlesEpic}
+  }
+\end{center}
+
+\vspace{2pt}
+% ------------------------- SUMMARY -------------------------
+\section{Resumo}
+Estudante de Engenharia de Computação na Escola Politécnica da USP, desenvolvendo software desde a adolescência, com experiência prática em sistemas embarcados (STM32, FreeRTOS, C/C++), aplicações desktop multiplataforma (Qt, GTK, Rust) e web (TypeScript, Svelte). Mantenedor de projetos open source, com interesse por desempenho, confiabilidade e segurança. \textbf{Busco estágio ou colaboração de meio período} em engenharia de software ou sistemas embarcados.
+
+% ------------------------- EXPERIENCE -------------------------
+\section{Experiência}
+
+\entry{Membro do Subsistema Elétrico — Sistemas Embarcados e Aquisição de Dados}{Equipe Poli Racing de Fórmula SAE}{mar.\ 2026 -- atual}{São Paulo, SP}
+\begin{itemize}
+  \item Lidero a recuperação e migração do sistema de aquisição de dados do veículo (datalogger) para a nova ECU FT550 Light, atualizando o firmware em C (STM32, FreeRTOS) e restabelecendo a comunicação com a ECU após ciclos de descontinuidade e documentação esparsa.
+  \item Desenvolvo a interface desktop de visualização e operação do sistema em C++ (Qt 6, Qt Quick, CMake), além de uma pipeline de processamento e conversão de dados em C++ que substituiu notebooks Jupyter legados.
+  \item Apoio o Departamento Financeiro em rotinas administrativas e na continuidade operacional da equipe.
+\end{itemize}
+
+\vspace{4pt}
+\entry{Cofundador e Líder da Equipe de Robótica — TORC / MakerBot333}{Escola Castanheiras}{jan.\ 2019 -- nov.\ 2021}{Santana de Parnaíba, SP}
+\begin{itemize}
+  \item Cofundei o TORC (Time Olímpico de Robótica Castanheiras) e liderei a equipe MakerBot333 durante três anos, coordenando projetos, preparação para competições e divisão de responsabilidades.
+  \item Conduzi a equipe ao \textbf{5º lugar na Etapa Nacional da Olimpíada Brasileira de Robótica (OBR) de 2020}, na modalidade Simulação.
+  \item Cofundei o Clube Maker, desenvolvendo uma sandbox de realidade aumentada, jogos com microcontroladores para eventos escolares e outros projetos de fabricação digital.
+\end{itemize}
+
+% ------------------------- EDUCATION -------------------------
+\section{Formação Acadêmica}
+
+\entry{Bacharelado em Engenharia de Computação}{Escola Politécnica da Universidade de São Paulo (Poli-USP)}{fev.\ 2026 -- nov.\ 2030 (previsão)}{São Paulo, SP}
+\vspace{3pt}
+\entry{Ensino Médio}{Escola Castanheiras}{jan.\ 2019 -- nov.\ 2021}{Santana de Parnaíba, SP}
+\begin{itemize}
+  \item Monografia de conclusão: \emph{``Sobre o uso da matemática na computação gráfica''} — ray tracer educacional em C++ (álgebra vetorial 3D, interseções raio--esfera, reflexão difusa recursiva, antialiasing e correção gama).
+\end{itemize}
+
+% ------------------------- PROJECTS -------------------------
+\section{Projetos Open Source \textmd{\small(github.com/DoodlesEpic)}}
+\begin{itemize}
+  \item \textbf{GraphPrime} — calculadora de números primos multiplataforma com gráficos e alto desempenho (Svelte, Tauri).
+  \item \textbf{dNotes} — aplicativo de anotações multiplataforma, livre e open source (Rust, GTK 4).
+  \item \textbf{Minesweeper} — jogo nativo e multiplataforma (C++, wxWidgets); \textbf{MultiplayerPicross} — nonogramas multiplayer (Svelte).
+  \item \textbf{BuildUp, Billsplit, Democraz} e outros — web apps em TypeScript/Svelte, incluindo rastreador de hábitos e visualizador de projetos de lei da Câmara dos Deputados.
+\end{itemize}
+
+% ------------------------- SKILLS -------------------------
+\section{Habilidades Técnicas}
+\begin{itemize}
+  \item \textbf{Linguagens:} C, C++, Rust, TypeScript/JavaScript, Python, C\#, Haskell, Shell.
+  \item \textbf{Sistemas embarcados:} STM32, FreeRTOS, aquisição de dados, integração com ECU, robótica.
+  \item \textbf{Desktop e web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
+  \item \textbf{Ferramentas:} Git, CMake, Linux; gestão de projetos e liderança de equipe.
+\end{itemize}
+
+% ------------------------- CERTIFICATES -------------------------
+\section{Licenças e Certificados}
+\begin{itemize}
+  \item \textbf{Programação Funcional Pura com Aplicações} — IME-USP, curso de extensão, 30h (fev.\ 2026). Haskell.
+  \item \textbf{Playgame} — Escola SAGA, 500h (2018--2019). Unreal Engine, modelagem e animação 3D e desenho.
+  \item \textbf{IB English B Higher Level, nota 7} — International Baccalaureate (jul.\ 2021).
+\end{itemize}
+
+% ------------------------- LANGUAGES -------------------------
+\section{Idiomas}
+\textbf{Português:} nativo \quad\textbar\quad \textbf{Inglês:} avançado (IB English B HL, nota 7) \quad\textbar\quad \textbf{Espanhol:} básico a intermediário
+
+\end{document}
