@@ -1,0 +1,111 @@
+% Curriculum vitae - Eduardo Lima Moraes (English version)
+% Compile with: pdflatex cv-en.tex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{charter}
+
+\definecolor{rulegray}{HTML}{999999}
+\definecolor{subgray}{HTML}{444444}
+
+% Sections: small caps, thin rule
+\titleformat{\section}{\normalsize\scshape\bfseries}{}{0pt}{}[\vspace{-7pt}\textcolor{rulegray}{\rule{\textwidth}{0.4pt}}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% Compact lists
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,parsep=0pt,topsep=2pt,label=\textbullet}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% Experience/education entry
+\newcommand{\entry}[4]{%
+  \textbf{#1} \hfill {\small #3}\\
+  {\itshape\color{subgray} #2} \hfill {\small\color{subgray}#4}\par
+}
+
+\begin{document}
+\enlargethispage{3\baselineskip}
+
+% ------------------------- HEADER -------------------------
+\begin{center}
+  {\huge\bfseries Eduardo Lima Moraes}\\[6pt]
+  {\small
+    Barueri, São Paulo, Brazil \;\textbar\;
+    \href{mailto:moraes.eduardo@proton.me}{moraes.eduardo@proton.me} \;\textbar\;
+    \href{https://www.doodlesdev.com}{doodlesdev.com} \;\textbar\;
+    \href{https://github.com/DoodlesEpic}{github.com/DoodlesEpic}
+  }
+\end{center}
+
+\vspace{2pt}
+% ------------------------- SUMMARY -------------------------
+\section{Summary}
+Computer Engineering student at the Polytechnic School of the University of São Paulo (Poli-USP), writing software since my early teens, with hands-on experience in embedded systems (STM32, FreeRTOS, C/C++), cross-platform desktop apps (Qt, GTK, Rust), and web (TypeScript, Svelte). Open source maintainer with a strong interest in performance, reliability, and security. \textbf{Seeking an internship or part-time position} in software engineering or embedded systems.
+
+% ------------------------- EXPERIENCE -------------------------
+\section{Experience}
+
+\entry{Electrical Subsystem Member — Embedded Systems and Data Acquisition}{Poli Racing Formula SAE Team}{Mar.\ 2026 -- present}{São Paulo, Brazil}
+\begin{itemize}
+  \item Lead the recovery and migration of the vehicle's data acquisition system (datalogger) to the new FT550 Light ECU, updating the C firmware (STM32, FreeRTOS) and re-establishing ECU communication after cycles of discontinuity and sparse documentation.
+  \item Develop the system's desktop visualization and operation interface in C++ (Qt 6, Qt Quick, CMake), plus a C++ data processing pipeline that replaced legacy Jupyter notebooks.
+  \item Support the Finance Department with administrative routines and the team's operational continuity.
+\end{itemize}
+
+\vspace{4pt}
+\entry{Co-founder and Robotics Team Lead — TORC / MakerBot333}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
+\begin{itemize}
+  \item Co-founded TORC (Castanheiras Olympic Robotics Team) and led the MakerBot333 team for three years, coordinating projects, competition preparation, and responsibilities.
+  \item Led the team to \textbf{5th place in the National Stage of the Brazilian Robotics Olympiad (OBR) in 2020}, in the Simulation category.
+  \item Co-founded the school's Maker Club, building an augmented reality sandbox, microcontroller-based games for school events, and other digital fabrication projects.
+\end{itemize}
+
+% ------------------------- EDUCATION -------------------------
+\section{Education}
+
+\entry{B.S.\ in Computer Engineering}{Polytechnic School of the University of São Paulo (Poli-USP)}{Feb.\ 2026 -- Nov.\ 2030 (expected)}{São Paulo, Brazil}
+\vspace{3pt}
+\entry{High School}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
+\begin{itemize}
+  \item Capstone monograph: \emph{``On the use of mathematics in computer graphics''} — educational ray tracer in C++ (3D vector algebra, ray--sphere intersections, recursive diffuse reflection, antialiasing, and gamma correction).
+\end{itemize}
+
+% ------------------------- PROJECTS -------------------------
+\section{Open Source Projects \textmd{\small(github.com/DoodlesEpic)}}
+\begin{itemize}
+  \item \textbf{GraphPrime} — high-performance, cross-platform prime number calculator with graphing (Svelte, Tauri).
+  \item \textbf{dNotes} — free and open source cross-platform note-taking application (Rust, GTK 4).
+  \item \textbf{Minesweeper} — native, cross-platform game (C++, wxWidgets); \textbf{MultiplayerPicross} — multiplayer nonograms (Svelte).
+  \item \textbf{BuildUp, Billsplit, Democraz}, and others — TypeScript/Svelte web apps, including a habit tracker and a bill viewer for the Brazilian Chamber of Deputies.
+\end{itemize}
+
+% ------------------------- SKILLS -------------------------
+\section{Technical Skills}
+\begin{itemize}
+  \item \textbf{Languages:} C, C++, Rust, TypeScript/JavaScript, Python, C\#, Haskell, Shell.
+  \item \textbf{Embedded systems:} STM32, FreeRTOS, data acquisition, ECU integration, robotics.
+  \item \textbf{Desktop and web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
+  \item \textbf{Tools:} Git, CMake, Linux; project management and team leadership.
+\end{itemize}
+
+% ------------------------- CERTIFICATES -------------------------
+\section{Licenses and Certifications}
+\begin{itemize}
+  \item \textbf{Pure Functional Programming with Applications} — IME-USP, university extension course, 30h (Feb.\ 2026). Haskell.
+  \item \textbf{Playgame} — SAGA School, 500h (2018--2019). Unreal Engine, 3D modeling and animation, and drawing.
+  \item \textbf{IB English B Higher Level, grade 7} — International Baccalaureate (Jul.\ 2021).
+\end{itemize}
+
+% ------------------------- LANGUAGES -------------------------
+\section{Languages}
+\textbf{Portuguese:} native \quad\textbar\quad \textbf{English:} advanced (IB English B HL, grade 7) \quad\textbar\quad \textbf{Spanish:} basic to intermediate
+
+\end{document}

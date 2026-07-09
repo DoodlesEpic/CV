@@ -12,8 +12,9 @@
 *.dvi
 *.xdv
 
-# Generated PDF (built by CI, download it from the Actions artifacts)
+# Generated PDFs (built by CI, download them from the Actions artifacts)
 cv.pdf
+cv-en.pdf
 
 # Editor and OS files
 .vscode/

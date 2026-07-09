@@ -9,6 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        include:
+          - file: cv.tex
+            pdf: cv.pdf
+            artifact: curriculo-eduardo-moraes
+          - file: cv-en.tex
+            pdf: cv-en.pdf
+            artifact: resume-eduardo-moraes-en
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -16,12 +26,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv.tex
+          root_file: ${{ matrix.file }}
           compiler: pdflatex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: curriculo-eduardo-moraes
-          path: cv.pdf
+          name: ${{ matrix.artifact }}
+          path: ${{ matrix.pdf }}
           if-no-files-found: error

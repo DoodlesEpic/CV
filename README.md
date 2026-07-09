@@ -1,6 +1,11 @@
 # CV
 
-This repository contains the LaTeX source code for my curriculum vitae. The document is a single-page résumé typeset with the Charter font, built entirely with packages available in any standard LaTeX distribution.
+This repository contains the LaTeX source code for my curriculum vitae, available in two languages:
+
+- `cv.tex` — Portuguese (Brazil)
+- `cv-en.tex` — English
+
+Both documents are single-page résumés typeset with the Charter font, sharing the same layout and built entirely with packages available in any standard LaTeX distribution.
 
 ## Building
 
@@ -16,29 +21,30 @@ On Debian-based distributions, the required packages are covered by:
 sudo apt install texlive-latex-extra texlive-fonts-recommended texlive-lang-portuguese
 ```
 
-To compile the document to PDF, run:
+To compile the documents to PDF, run:
 
 ```
 pdflatex cv.tex
+pdflatex cv-en.tex
 ```
 
-The output will be written to `cv.pdf`. A single pass is enough, as the document has no bibliography or cross-references.
+The output will be written to `cv.pdf` and `cv-en.pdf`. A single pass is enough, as the documents have no bibliography or cross-references.
 
 Alternatively, if you have `latexmk` installed, you can let it handle the compilation:
 
 ```
-latexmk -pdf cv.tex
+latexmk -pdf cv.tex cv-en.tex
 ```
 
 ## Continuous Integration
 
-Every push to the `main` branch triggers a GitHub Actions workflow that compiles the document using [latex-action](https://github.com/xu-cheng/latex-action). The resulting PDF is uploaded as a build artifact, which you can download from the workflow run page under the Actions tab. Note that artifacts expire after 90 days, so for a permanent copy compile the document locally.
+Every push to the `main` branch triggers a GitHub Actions workflow that compiles both documents using [latex-action](https://github.com/xu-cheng/latex-action). The resulting PDFs are uploaded as build artifacts — `curriculo-eduardo-moraes` (Portuguese) and `resume-eduardo-moraes-en` (English) — which you can download from the workflow run page under the Actions tab. Note that artifacts expire after 90 days, so for a permanent copy compile the documents locally.
 
 The workflow is defined in `.github/workflows/build.yml`.
 
 ## Dependencies
 
-The document uses only standard packages: `geometry`, `enumitem`, `titlesec`, `xcolor`, `hyperref`, `babel` (brazil), and `charter`. No external fonts or custom classes are required.
+The documents use only standard packages: `geometry`, `enumitem`, `titlesec`, `xcolor`, `hyperref`, `babel` (brazil and english), and `charter`. No external fonts or custom classes are required.
 
 ## License
 
