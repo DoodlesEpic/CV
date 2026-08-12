@@ -38,7 +38,9 @@ latexmk -pdf cv.tex cv-en.tex
 
 ## Continuous Integration
 
-Every push to the `main` branch triggers a GitHub Actions workflow that compiles both documents using [latex-action](https://github.com/xu-cheng/latex-action). The resulting PDFs are uploaded as build artifacts — `curriculo-eduardo-moraes` (Portuguese) and `resume-eduardo-moraes-en` (English) — which you can download from the workflow run page under the Actions tab. Note that artifacts expire after 90 days, so for a permanent copy compile the documents locally.
+Every push to the `main` branch triggers a GitHub Actions workflow that compiles both documents using [latex-action](https://github.com/xu-cheng/latex-action). The resulting PDFs are uploaded as build artifacts — `curriculo-eduardo-moraes` (Portuguese) and `resume-eduardo-moraes-en` (English) — which you can download from the workflow run page under the Actions tab. Note that artifacts expire after 90 days, so for a permanent copy use the release below.
+
+The same run then publishes a GitHub release tagged `v<run number>` with both `cv.pdf` and `cv-en.pdf` attached, so the latest release always holds the current version of each CV. The workflow can also be started manually from the Actions tab.
 
 The workflow is defined in `.github/workflows/build.yml`.
 
