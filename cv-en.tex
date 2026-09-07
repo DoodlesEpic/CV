@@ -5,7 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage[a4paper,margin=1.6cm,top=0.8cm,bottom=1.3cm]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -17,10 +17,10 @@
 
 % Sections: small caps, thin rule
 \titleformat{\section}{\normalsize\scshape\bfseries}{}{0pt}{}[\vspace{-7pt}\textcolor{rulegray}{\rule{\textwidth}{0.4pt}}]
-\titlespacing*{\section}{0pt}{9pt}{5pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
 % Compact lists
-\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,parsep=0pt,topsep=2pt,label=\textbullet}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.2pt,parsep=0pt,topsep=1.5pt,label=\textbullet}
 
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
@@ -53,15 +53,15 @@ Computer Engineering student at the Polytechnic School of the University of São
 % ------------------------- EXPERIENCE -------------------------
 \section{Experience}
 
-\entry{Electrical Subsystem Member — Embedded Systems and Data Acquisition}{Poli Racing Formula SAE Team}{Mar.\ 2026 -- present}{São Paulo, Brazil}
+\entry{Electrical Subsystem Member: Embedded Systems and Data Acquisition}{Poli Racing Formula SAE Team}{Mar.\ 2026 -- present}{São Paulo, Brazil}
 \begin{itemize}
   \item Lead the recovery and migration of the vehicle's data acquisition system (datalogger) to the new FT550 Light ECU, updating the C firmware (STM32, FreeRTOS) and re-establishing ECU communication after cycles of discontinuity and sparse documentation.
-  \item Develop the system's desktop visualization and operation interface in C++ (Qt 6, Qt Quick, CMake), plus a C++ data processing pipeline that replaced legacy Jupyter notebooks.
-  \item Support the Finance Department with administrative routines and the team's operational continuity.
+  \item Develop the system's desktop visualization and operation interface in C++ (Qt 6, Qt Quick, CMake), and rewrote the log-processing pipeline in modern C++, cutting analysis time from about 30 minutes to 20 seconds (about 90x faster).
+  \item Also support the Finance Department, handling administrative routines and working directly with the team captain, subsystem directors, and sponsors.
 \end{itemize}
 
 \vspace{4pt}
-\entry{Co-founder and Robotics Team Lead — TORC / MakerBot333}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
+\entry{Co-founder and Robotics Team Lead: TORC / MakerBot333}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
 \begin{itemize}
   \item Co-founded TORC (Castanheiras Olympic Robotics Team) and led the MakerBot333 team for three years, coordinating projects, competition preparation, and responsibilities.
   \item Led the team to \textbf{5th place in the National Stage of the Brazilian Robotics Olympiad (OBR) in 2020}, in the Simulation category.
@@ -72,19 +72,17 @@ Computer Engineering student at the Polytechnic School of the University of São
 \section{Education}
 
 \entry{B.S.\ in Computer Engineering}{Polytechnic School of the University of São Paulo (Poli-USP)}{Feb.\ 2026 -- Nov.\ 2030 (expected)}{São Paulo, Brazil}
+{\small Weighted average: \textbf{9.0/10}. Rank: \textbf{15th of 74} in the entry cohort (updated Sept.\ 2026).}\par
 \vspace{3pt}
 \entry{High School}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
-\begin{itemize}
-  \item Capstone monograph: \emph{``On the use of mathematics in computer graphics''} — educational ray tracer in C++ (3D vector algebra, ray--sphere intersections, recursive diffuse reflection, antialiasing, and gamma correction).
-\end{itemize}
 
 % ------------------------- PROJECTS -------------------------
 \section{Open Source Projects \textmd{\small(github.com/DoodlesEpic)}}
 \begin{itemize}
-  \item \textbf{GraphPrime} — high-performance, cross-platform prime number calculator with graphing (Svelte, Tauri).
-  \item \textbf{dNotes} — free and open source cross-platform note-taking application (Rust, GTK 4).
-  \item \textbf{Minesweeper} — native, cross-platform game (C++, wxWidgets); \textbf{MultiplayerPicross} — multiplayer nonograms (Svelte).
-  \item \textbf{BuildUp, Billsplit, Democraz}, and others — TypeScript/Svelte web apps, including a habit tracker and a bill viewer for the Brazilian Chamber of Deputies.
+  \item \textbf{GraphPrime}: high-performance, cross-platform prime number calculator with graphing (Svelte, Tauri).
+  \item \textbf{dNotes}: free and open source cross-platform note-taking application (Rust, GTK 4).
+  \item \textbf{Minesweeper}: native, cross-platform game (C++, wxWidgets). \textbf{MultiplayerPicross}: multiplayer nonograms (Svelte).
+  \item \textbf{BuildUp, Billsplit, Democraz}, and others: TypeScript/Svelte web apps, including a habit tracker and a bill viewer for the Brazilian Chamber of Deputies.
 \end{itemize}
 
 % ------------------------- SKILLS -------------------------
@@ -93,15 +91,15 @@ Computer Engineering student at the Polytechnic School of the University of São
   \item \textbf{Languages:} C, C++, Rust, TypeScript/JavaScript, Python, C\#, Haskell, Shell.
   \item \textbf{Embedded systems:} STM32, FreeRTOS, data acquisition, ECU integration, robotics.
   \item \textbf{Desktop and web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
-  \item \textbf{Tools:} Git, CMake, Linux; project management and team leadership.
+  \item \textbf{Tools:} Git, CMake, Linux. AI-assisted development (coding agents and LLM APIs), project management and team leadership.
 \end{itemize}
 
 % ------------------------- CERTIFICATES -------------------------
 \section{Licenses and Certifications}
 \begin{itemize}
-  \item \textbf{Pure Functional Programming with Applications} — IME-USP, university extension course, 30h (Feb.\ 2026). Haskell.
-  \item \textbf{Playgame} — SAGA School, 500h (2018--2019). Unreal Engine, 3D modeling and animation, and drawing.
-  \item \textbf{IB English B Higher Level, grade 7} — International Baccalaureate (Jul.\ 2021).
+  \item \textbf{Pure Functional Programming with Applications}: IME-USP, university extension course, 30h (Feb.\ 2026). Haskell.
+  \item \textbf{Playgame}: SAGA School, 500h (2018--2019). Unreal Engine, 3D modeling and animation, and drawing.
+  \item \textbf{IB English B Higher Level, grade 7}: International Baccalaureate (Jul.\ 2021).
 \end{itemize}
 
 % ------------------------- LANGUAGES -------------------------
