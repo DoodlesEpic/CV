@@ -1,26 +1,27 @@
 % Curriculum vitae - Eduardo Lima Moraes (English version)
-% Compile with: pdflatex cv-en.tex
+% Compile with: pdflatex cv-en-updated.tex
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\usepackage[a4paper,margin=1.6cm,top=0.8cm,bottom=1.3cm]{geometry}
+\usepackage[a4paper,margin=1.55cm,top=0.75cm,bottom=1.15cm]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{charter}
+\usepackage{microtype}
 
 \definecolor{rulegray}{HTML}{999999}
 \definecolor{subgray}{HTML}{444444}
 
 % Sections: small caps, thin rule
 \titleformat{\section}{\normalsize\scshape\bfseries}{}{0pt}{}[\vspace{-7pt}\textcolor{rulegray}{\rule{\textwidth}{0.4pt}}]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\section}{0pt}{6.5pt}{3pt}
 
 % Compact lists
-\setlist[itemize]{leftmargin=1.1em,itemsep=1.2pt,parsep=0pt,topsep=1.5pt,label=\textbullet}
+\setlist[itemize]{leftmargin=1.1em,itemsep=0.7pt,parsep=0pt,topsep=1pt,label=\textbullet}
 
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
@@ -36,68 +37,102 @@
 
 % ------------------------- HEADER -------------------------
 \begin{center}
-  {\huge\bfseries Eduardo Lima Moraes}\\[6pt]
+  {\huge\bfseries Eduardo Lima Moraes}\\[4pt]
   {\small
-    Barueri, São Paulo, Brazil \;\textbar\;
+    Barueri, SP, Brazil \;\textbar\;
     \href{mailto:moraes.eduardo@proton.me}{moraes.eduardo@proton.me} \;\textbar\;
-    \href{https://www.doodlesdev.com}{doodlesdev.com} \;\textbar\;
-    \href{https://github.com/DoodlesEpic}{github.com/DoodlesEpic}
+    \href{https://www.doodlesdev.com}{doodlesdev.com}\\[1pt]
+    \href{https://github.com/DoodlesEpic}{github.com/DoodlesEpic} \;\textbar\;
+    \href{https://www.linkedin.com/in/doodlesdev/}{linkedin.com/in/doodlesdev}
   }
 \end{center}
 
-\vspace{2pt}
+\vspace{0pt}
+% Compact variant for digital-only use:
+% Barueri, SP, Brazil | moraes.eduardo@proton.me | doodlesdev.com | GitHub | LinkedIn
+
 % ------------------------- SUMMARY -------------------------
 \section{Summary}
-Computer Engineering student at the Polytechnic School of the University of São Paulo (Poli-USP), writing software since my early teens, with hands-on experience in embedded systems (STM32, FreeRTOS, C/C++), cross-platform desktop apps (Qt, GTK, Rust), and web (TypeScript, Svelte). Open source maintainer with a strong interest in performance, reliability, and security. \textbf{Seeking an internship or part-time position} in software engineering or embedded systems.
+Computer Engineering student at Poli-USP, writing software since my early teens, with experience in embedded systems, desktop and web applications, open source, and technical leadership. Interested in performance, reliability, and security. \textbf{Seeking an internship or part-time position} in software engineering or embedded systems.
+
+% Longer summary, useful for more technical applications:
+% Computer Engineering student at the Polytechnic School of the University of São Paulo (Poli-USP), writing software since my early teens, with hands-on experience in embedded systems (STM32, FreeRTOS, C/C++), cross-platform desktop apps (Qt, GTK, Rust), and web (TypeScript, Svelte). Open source maintainer with a strong interest in performance, reliability, and security. Seeking an internship or part-time position in software engineering or embedded systems.
 
 % ------------------------- EXPERIENCE -------------------------
 \section{Experience}
 
 \entry{Electrical Subsystem Member: Embedded Systems and Data Acquisition}{Poli Racing Formula SAE Team}{Mar.\ 2026 -- present}{São Paulo, Brazil}
 \begin{itemize}
-  \item Lead the recovery and migration of the vehicle's data acquisition system (datalogger) to the new FT550 Light ECU, updating the C firmware (STM32, FreeRTOS) and re-establishing ECU communication after cycles of discontinuity and sparse documentation.
-  \item Develop the system's desktop visualization and operation interface in C++ (Qt 6, Qt Quick, CMake), and rewrote the log-processing pipeline in modern C++, cutting analysis time from about 30 minutes to 20 seconds (about 90x faster).
-  \item Also support the Finance Department, handling administrative routines and working directly with the team captain, subsystem directors, and sponsors.
+  \item Lead the recovery and migration of the datalogger to the FT550 Light ECU, updating the C firmware (STM32, FreeRTOS) and re-establishing ECU communication after discontinuity and sparse documentation.
+  \item Develop the desktop interface in C++ (Qt 6, Qt Quick, CMake) and rewrote log processing, cutting analysis time from about 30 minutes to 20 seconds (about 90x faster).
+  \item Also support the Finance Department with administrative routines and contact with the team captain, directors, and sponsors.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
+\entry{Software Developer: Project for VichiWork}{VichiWork}{Aug.\ 2019 -- Feb.\ 2020}{Alphaville, Brazil}
+\begin{itemize}
+  \item Built with a small team a web prototype for a healthcare company, focused on organizing and visualizing health-plan and procedure data, with requirements gathered directly from the company lead.
+  \item Worked on architecture and the Angular frontend, implemented Firebase Auth, and configured the application on Google Cloud App Engine.
+\end{itemize}
+
+% Alternative bullet for software/cloud applications:
+% \item Also supported infrastructure decisions, development organization, and technical task allocation using Git, Google Cloud, and project-management tools.
+
+\vspace{2pt}
 \entry{Co-founder and Robotics Team Lead: TORC / MakerBot333}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
 \begin{itemize}
-  \item Co-founded TORC (Castanheiras Olympic Robotics Team) and led the MakerBot333 team for three years, coordinating projects, competition preparation, and responsibilities.
+  \item Co-founded TORC and the Maker Club and led MakerBot333 for three years, coordinating projects and competitions, including an augmented reality sandbox and microcontroller games.
   \item Led the team to \textbf{5th place in the National Stage of the Brazilian Robotics Olympiad (OBR) in 2020}, in the Simulation category.
-  \item Co-founded the school's Maker Club, building an augmented reality sandbox, microcontroller-based games for school events, and other digital fabrication projects.
 \end{itemize}
+
+% Original TORC bullets, preserved for CV variants:
+% \item Co-founded TORC (Castanheiras Olympic Robotics Team) and led the MakerBot333 team for three years, coordinating projects, competition preparation, and responsibilities.
+% \item Led the team to 5th place in the National Stage of the Brazilian Robotics Olympiad (OBR) in 2020, in the Simulation category.
+% \item Co-founded the school's Maker Club, building an augmented reality sandbox, microcontroller-based games for school events, and other digital fabrication projects.
 
 % ------------------------- EDUCATION -------------------------
 \section{Education}
 
 \entry{B.S.\ in Computer Engineering}{Polytechnic School of the University of São Paulo (Poli-USP)}{Feb.\ 2026 -- Nov.\ 2030 (expected)}{São Paulo, Brazil}
 {\small Weighted average: \textbf{9.0/10}. Rank: \textbf{15th of 74} in the entry cohort (updated Sept.\ 2026).}\par
-\vspace{3pt}
+\vspace{2pt}
 \entry{High School}{Castanheiras School}{Jan.\ 2019 -- Nov.\ 2021}{Santana de Parnaíba, Brazil}
+{\small Monograph: \textit{On the Use of Mathematics in Computer Graphics}. Developed an educational ray tracer in C++.}\par
+% Previous short version: High school monograph on computer graphics rendering.
+% Original Portuguese title: "Sobre o uso da matemática na computação gráfica".
+% Details for academic/graphics-focused variants: implemented 3D vector algebra, camera and scene composition, ray-sphere intersections using quadratic equations, recursive diffuse reflection, stochastic-sampling antialiasing, and gamma correction, generating PPM images.
+% High school activities and groups: author and presenter of the monograph; IB Diploma Programme English B Higher Level, grade 7; participant in the 22nd Brazilian Astronomy and Astronautics Olympiad (2019).
 
 % ------------------------- PROJECTS -------------------------
-\section{Open Source Projects \textmd{\small(github.com/DoodlesEpic)}}
+\section{Open Source Projects}
+% The explicit GitHub URL was removed from the section title to reduce visual noise; GitHub remains in the header.
 \begin{itemize}
-  \item \textbf{GraphPrime}: high-performance, cross-platform prime number calculator with graphing (Svelte, Tauri).
-  \item \textbf{dNotes}: free and open source cross-platform note-taking application (Rust, GTK 4).
-  \item \textbf{Minesweeper}: native, cross-platform game (C++, wxWidgets). \textbf{MultiplayerPicross}: multiplayer nonograms (Svelte).
-  \item \textbf{BuildUp, Billsplit, Democraz}, and others: TypeScript/Svelte web apps, including a habit tracker and a bill viewer for the Brazilian Chamber of Deputies.
+  \item \textbf{GraphPrime}: high-performance, cross-platform prime number calculator with graphing (Svelte, Tauri). \textbf{dNotes}: free and open source cross-platform note-taking application (Rust, GTK 4).
+  \item \textbf{Minesweeper}: native, cross-platform game (C++, wxWidgets). \textbf{MultiplayerPicross}: multiplayer nonograms (Svelte). \textbf{BuildUp, Billsplit, Democraz}, and others: TypeScript/Svelte web apps, including a habit tracker and a bill viewer for the Brazilian Chamber of Deputies.
 \end{itemize}
+
+% Expanded project format for portfolio-focused applications:
+% \item \textbf{GraphPrime}: high-performance, cross-platform prime number calculator with graphing (Svelte, Tauri).
+% \item \textbf{dNotes}: free and open source cross-platform note-taking application (Rust, GTK 4).
+% \item \textbf{Minesweeper}: native, cross-platform game (C++, wxWidgets). \textbf{MultiplayerPicross}: multiplayer nonograms (Svelte).
+% \item \textbf{BuildUp, Billsplit, Democraz}, and others: TypeScript/Svelte web apps, including a habit tracker and a bill viewer for the Brazilian Chamber of Deputies.
 
 % ------------------------- SKILLS -------------------------
 \section{Technical Skills}
 \begin{itemize}
   \item \textbf{Languages:} C, C++, Rust, TypeScript/JavaScript, Python, C\#, Haskell, Shell.
-  \item \textbf{Embedded systems:} STM32, FreeRTOS, data acquisition, ECU integration, robotics.
-  \item \textbf{Desktop and web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
-  \item \textbf{Tools:} Git, CMake, Linux. AI-assisted development (coding agents and LLM APIs), project management and team leadership.
+  \item \textbf{Embedded systems:} STM32, FreeRTOS, data acquisition, ECU integration, robotics. \textbf{Desktop and web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
+  \item \textbf{Tools:} Git, CMake, Linux. AI-assisted development (coding agents and LLM APIs), project management, and team leadership.
 \end{itemize}
+
+% Expanded skills format:
+% \item \textbf{Embedded systems:} STM32, FreeRTOS, data acquisition, ECU integration, robotics.
+% \item \textbf{Desktop and web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
 
 % ------------------------- CERTIFICATES -------------------------
 \section{Licenses and Certifications}
 \begin{itemize}
-  \item \textbf{Pure Functional Programming with Applications}: IME-USP, university extension course, 30h (Feb.\ 2026). Haskell.
+  \item \textbf{Pure Functional Programming with Applications}: IME-USP, extension course, 30h (Feb.\ 2026). Haskell.
   \item \textbf{Playgame}: SAGA School, 500h (2018--2019). Unreal Engine, 3D modeling and animation, and drawing.
   \item \textbf{IB English B Higher Level, grade 7}: International Baccalaureate (Jul.\ 2021).
 \end{itemize}

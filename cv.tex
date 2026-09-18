@@ -1,26 +1,27 @@
 % Curriculum vitae - Eduardo Lima Moraes
-% Compile with: pdflatex cv.tex
+% Compile with: pdflatex cv-updated.tex
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
-\usepackage[a4paper,margin=1.6cm,top=0.8cm,bottom=1.3cm]{geometry}
+\usepackage[a4paper,margin=1.55cm,top=0.75cm,bottom=1.15cm]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{charter}
+\usepackage{microtype}
 
 \definecolor{rulegray}{HTML}{999999}
 \definecolor{subgray}{HTML}{444444}
 
 % Sections: small caps, thin rule
 \titleformat{\section}{\normalsize\scshape\bfseries}{}{0pt}{}[\vspace{-7pt}\textcolor{rulegray}{\rule{\textwidth}{0.4pt}}]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\section}{0pt}{6.5pt}{3pt}
 
 % Compact lists
-\setlist[itemize]{leftmargin=1.1em,itemsep=1.2pt,parsep=0pt,topsep=1.5pt,label=\textbullet}
+\setlist[itemize]{leftmargin=1.1em,itemsep=0.7pt,parsep=0pt,topsep=1pt,label=\textbullet}
 
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
@@ -32,67 +33,100 @@
 }
 
 \begin{document}
-\enlargethispage{2\baselineskip}
+\enlargethispage{3\baselineskip}
 
 % ------------------------- HEADER -------------------------
 \begin{center}
-  {\huge\bfseries Eduardo Lima Moraes}\\[6pt]
+  {\huge\bfseries Eduardo Lima Moraes}\\[4pt]
   {\small
-    Barueri, São Paulo, Brasil \;\textbar\;
+    Barueri, SP, Brasil \;\textbar\;
     \href{mailto:moraes.eduardo@proton.me}{moraes.eduardo@proton.me} \;\textbar\;
-    \href{https://www.doodlesdev.com}{doodlesdev.com} \;\textbar\;
-    \href{https://github.com/DoodlesEpic}{github.com/DoodlesEpic}
+    \href{https://www.doodlesdev.com}{doodlesdev.com}\\[1pt]
+    \href{https://github.com/DoodlesEpic}{github.com/DoodlesEpic} \;\textbar\;
+    \href{https://www.linkedin.com/in/doodlesdev/}{linkedin.com/in/doodlesdev}
   }
 \end{center}
 
-\vspace{2pt}
+\vspace{0pt}
+% Variante compacta para uso exclusivamente digital:
+% Barueri, SP, Brasil | moraes.eduardo@proton.me | doodlesdev.com | GitHub | LinkedIn
+
 % ------------------------- SUMMARY -------------------------
 \section{Resumo}
-Estudante de Engenharia de Computação na Escola Politécnica da USP, desenvolvendo software desde a adolescência, com experiência prática em sistemas embarcados (STM32, FreeRTOS, C/C++), aplicações desktop multiplataforma (Qt, GTK, Rust) e web (TypeScript, Svelte). Mantenedor de projetos open source, com interesse por desempenho, confiabilidade e segurança. \textbf{Busco estágio ou colaboração de meio período} em engenharia de software ou sistemas embarcados.
+Estudante de Engenharia de Computação na Poli-USP, desenvolvendo software desde a adolescência, com experiência em sistemas embarcados, aplicações desktop e web, open source e liderança técnica. Interesse em desempenho, confiabilidade e segurança. \textbf{Busco estágio ou colaboração de meio período} em engenharia de software ou sistemas embarcados.
+
+% Versão longa do resumo, útil para vagas mais técnicas:
+% Estudante de Engenharia de Computação na Escola Politécnica da USP, desenvolvendo software desde a adolescência, com experiência prática em sistemas embarcados (STM32, FreeRTOS, C/C++), aplicações desktop multiplataforma (Qt, GTK, Rust) e web (TypeScript, Svelte). Mantenedor de projetos open source, com interesse por desempenho, confiabilidade e segurança. Busco estágio ou colaboração de meio período em engenharia de software ou sistemas embarcados.
 
 % ------------------------- EXPERIENCE -------------------------
 \section{Experiência}
 
 \entry{Membro do Subsistema Elétrico: Sistemas Embarcados e Aquisição de Dados}{Equipe Poli Racing de Fórmula SAE}{mar.\ 2026 -- atual}{São Paulo, SP}
 \begin{itemize}
-  \item Lidero a recuperação e migração do sistema de aquisição de dados do veículo (datalogger) para a nova ECU FT550 Light, atualizando o firmware em C (STM32, FreeRTOS) e restabelecendo a comunicação com a ECU após ciclos de descontinuidade e documentação esparsa.
-  \item Desenvolvo a interface desktop de visualização e operação do sistema em C++ (Qt 6, Qt Quick, CMake) e reescrevi em C++ moderno a pipeline de processamento dos logs, reduzindo o tempo de análise de cerca de 30 minutos para 20 segundos (aprox. 90x).
-  \item Atuo também no Departamento Financeiro, apoiando rotinas administrativas e mantendo contato com o capitão, diretores de subsistemas e patrocinadores da equipe.
+  \item Lidero a recuperação e migração do datalogger para a ECU FT550 Light, atualizando firmware em C (STM32, FreeRTOS) e restabelecendo a comunicação com a ECU após descontinuidade e documentação esparsa.
+  \item Desenvolvo a interface desktop em C++ (Qt 6, Qt Quick, CMake) e reescrevi o processamento de logs, reduzindo a análise de cerca de 30 minutos para 20 segundos (aprox. 90x).
+  \item Atuo também no Departamento Financeiro, apoiando rotinas administrativas e o contato com capitão, diretores e patrocinadores.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
+\entry{Desenvolvedor de Software: Projeto para VichiWork}{VichiWork}{ago.\ 2019 -- fev.\ 2020}{Alphaville, SP}
+\begin{itemize}
+  \item Desenvolvi em equipe um protótipo web para uma empresa da área de saúde, voltado à organização e visualização de dados de planos e procedimentos, com levantamento de requisitos junto ao responsável pela empresa.
+  \item Atuei na arquitetura e no frontend em Angular, implementei autenticação com Firebase Auth e configurei a aplicação no Google Cloud App Engine.
+\end{itemize}
+
+% Alternativa para vagas de software/cloud:
+% \item Apoiei também a definição de infraestrutura, organização do desenvolvimento e divisão técnica das atividades da equipe, usando Git, Google Cloud e ferramentas de gestão de projeto.
+
+\vspace{2pt}
 \entry{Cofundador e Líder da Equipe de Robótica: TORC / MakerBot333}{Escola Castanheiras}{jan.\ 2019 -- nov.\ 2021}{Santana de Parnaíba, SP}
 \begin{itemize}
-  \item Cofundei o TORC (Time Olímpico de Robótica Castanheiras) e liderei a equipe MakerBot333 durante três anos, coordenando projetos, preparação para competições e divisão de responsabilidades.
+  \item Cofundei o TORC e o Clube Maker e liderei a MakerBot333 por três anos, coordenando projetos e competições, incluindo uma sandbox de realidade aumentada e jogos com microcontroladores.
   \item Conduzi a equipe ao \textbf{5º lugar na Etapa Nacional da Olimpíada Brasileira de Robótica (OBR) de 2020}, na modalidade Simulação.
-  \item Cofundei o Clube Maker, desenvolvendo uma sandbox de realidade aumentada, jogos com microcontroladores para eventos escolares e outros projetos de fabricação digital.
 \end{itemize}
+
+% Bullets originais do TORC, preservados para variações do currículo:
+% \item Cofundei o TORC (Time Olímpico de Robótica Castanheiras) e liderei a equipe MakerBot333 durante três anos, coordenando projetos, preparação para competições e divisão de responsabilidades.
+% \item Conduzi a equipe ao 5º lugar na Etapa Nacional da Olimpíada Brasileira de Robótica (OBR) de 2020, na modalidade Simulação.
+% \item Cofundei o Clube Maker, desenvolvendo uma sandbox de realidade aumentada, jogos com microcontroladores para eventos escolares e outros projetos de fabricação digital.
 
 % ------------------------- EDUCATION -------------------------
 \section{Formação Acadêmica}
 
 \entry{Bacharelado em Engenharia de Computação}{Escola Politécnica da Universidade de São Paulo (Poli-USP)}{fev.\ 2026 -- nov.\ 2030 (previsão)}{São Paulo, SP}
 {\small Média ponderada: \textbf{9,0/10}. Classificação: \textbf{15º de 74} na turma de ingresso (atualizado em set.\ 2026).}\par
-\vspace{3pt}
+\vspace{2pt}
 \entry{Ensino Médio}{Escola Castanheiras}{jan.\ 2019 -- nov.\ 2021}{Santana de Parnaíba, SP}
+{\small Monografia: \textit{Sobre o uso da matemática na computação gráfica}. Desenvolvimento de um ray tracer educacional em C++.}\par
+% Versão curta anterior: Monografia de Ensino Médio sobre renderização gráfica.
+% Detalhes para variantes acadêmicas/gráficas: implementei álgebra vetorial tridimensional, câmera e composição de cena, interseções entre raios e esferas por equações quadráticas, reflexão difusa recursiva, antialiasing por amostragem estocástica e correção gama, gerando imagens no formato PPM.
+% Atividades e grupos no Ensino Médio: autor e apresentador da monografia; English B Higher Level do IB Diploma Programme, nota 7; participante da 22ª Olimpíada Brasileira de Astronomia e Astronáutica (2019).
 
 % ------------------------- PROJECTS -------------------------
-\section{Projetos Open Source \textmd{\small(github.com/DoodlesEpic)}}
+\section{Projetos Open Source}
+% O link explícito do GitHub no título foi removido para reduzir ruído visual; o GitHub permanece no cabeçalho.
 \begin{itemize}
-  \item \textbf{GraphPrime}: calculadora de números primos multiplataforma com gráficos e alto desempenho (Svelte, Tauri).
-  \item \textbf{dNotes}: aplicativo de anotações multiplataforma, livre e open source (Rust, GTK 4).
-  \item \textbf{Minesweeper}: jogo nativo e multiplataforma (C++, wxWidgets). \textbf{MultiplayerPicross}: nonogramas multiplayer (Svelte).
-  \item \textbf{BuildUp, Billsplit, Democraz} e outros: web apps em TypeScript/Svelte, incluindo rastreador de hábitos e visualizador de projetos de lei da Câmara dos Deputados.
+  \item \textbf{GraphPrime}: calculadora de números primos multiplataforma com gráficos e alto desempenho (Svelte, Tauri). \textbf{dNotes}: aplicativo de anotações multiplataforma, livre e open source (Rust, GTK 4).
+  \item \textbf{Minesweeper}: jogo nativo e multiplataforma (C++, wxWidgets). \textbf{MultiplayerPicross}: nonogramas multiplayer (Svelte). \textbf{BuildUp, Billsplit, Democraz} e outros: web apps em TypeScript/Svelte, incluindo rastreador de hábitos e visualizador de projetos de lei da Câmara dos Deputados.
 \end{itemize}
+
+% Formato expandido dos projetos para vagas focadas em portfólio:
+% \item \textbf{GraphPrime}: calculadora de números primos multiplataforma com gráficos e alto desempenho (Svelte, Tauri).
+% \item \textbf{dNotes}: aplicativo de anotações multiplataforma, livre e open source (Rust, GTK 4).
+% \item \textbf{Minesweeper}: jogo nativo e multiplataforma (C++, wxWidgets). \textbf{MultiplayerPicross}: nonogramas multiplayer (Svelte).
+% \item \textbf{BuildUp, Billsplit, Democraz} e outros: web apps em TypeScript/Svelte, incluindo rastreador de hábitos e visualizador de projetos de lei da Câmara dos Deputados.
 
 % ------------------------- SKILLS -------------------------
 \section{Habilidades Técnicas}
 \begin{itemize}
   \item \textbf{Linguagens:} C, C++, Rust, TypeScript/JavaScript, Python, C\#, Haskell, Shell.
-  \item \textbf{Sistemas embarcados:} STM32, FreeRTOS, aquisição de dados, integração com ECU, robótica.
-  \item \textbf{Desktop e web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
+  \item \textbf{Sistemas embarcados:} STM32, FreeRTOS, aquisição de dados, integração com ECU, robótica. \textbf{Desktop e web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
   \item \textbf{Ferramentas:} Git, CMake, Linux. Desenvolvimento assistido por IA (agentes de código e APIs de LLMs), gestão de projetos e liderança de equipe.
 \end{itemize}
+
+% Formato expandido das habilidades:
+% \item \textbf{Sistemas embarcados:} STM32, FreeRTOS, aquisição de dados, integração com ECU, robótica.
+% \item \textbf{Desktop e web:} Qt 6 / Qt Quick, GTK 4, wxWidgets, Svelte, ASP.NET Core, Tauri.
 
 % ------------------------- CERTIFICATES -------------------------
 \section{Licenças e Certificados}
